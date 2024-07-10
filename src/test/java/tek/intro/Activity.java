@@ -9,6 +9,6 @@ public class Activity {
         driver.manage().window().maximize();
         String title = driver.getTitle();
         System.out.println(title);
-        driver.quit();
+        //driver.quit();
     }
 }
