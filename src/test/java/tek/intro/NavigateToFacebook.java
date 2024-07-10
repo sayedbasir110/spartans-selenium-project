@@ -9,7 +9,10 @@ public class NavigateToFacebook {
         chromeDriver.get("http://facebook.com");
         // to maximize the browser window
         chromeDriver.manage().window().maximize();
+        // print application title to the console
+        String title = chromeDriver.getTitle();
+        System.out.println(title);
         // close the browser entirely
-        //chromeDriver.quit();
+        chromeDriver.quit();
     }
 }
