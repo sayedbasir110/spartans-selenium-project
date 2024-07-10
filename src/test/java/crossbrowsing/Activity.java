@@ -11,7 +11,7 @@ public class Activity {
         Scanner userInput = new Scanner(System.in);
         System.out.print("What browser do you want to use: ");
         String browserType;
-        browserType = userInput.next();
+        browserType = userInput.next().trim().toLowerCase();
         WebDriver driver;
         if (browserType.equals("chrome")) driver = new ChromeDriver();
         else if (browserType.equals("firefox")) driver = new FirefoxDriver();
