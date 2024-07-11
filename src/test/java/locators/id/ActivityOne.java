@@ -5,7 +5,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 
-public class Activity {
+public class ActivityOne {
     public static void main(String[] args) {
         WebDriver driver = new ChromeDriver();
         driver.manage().window().maximize();
@@ -26,6 +26,7 @@ public class Activity {
         By loginLocator = By.id("loginBtn");
         WebElement loginBtn = driver.findElement(loginLocator);
         loginBtn.click();
+
 
     }
 }
