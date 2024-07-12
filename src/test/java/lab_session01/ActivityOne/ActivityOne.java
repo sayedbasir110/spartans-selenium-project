@@ -8,7 +8,7 @@ import java.util.Random;
 
 public class ActivityOne {
     public static void main(String[] args) throws InterruptedException {
-        Random random = new Random();
+
         WebDriver driver = new ChromeDriver();
         // 01. navigate to the tek website
         driver.get("https://retail.tekschool-students.com/");

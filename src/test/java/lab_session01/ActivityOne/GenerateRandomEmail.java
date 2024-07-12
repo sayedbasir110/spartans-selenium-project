@@ -10,6 +10,7 @@ public class GenerateRandomEmail {
         StringBuilder string = new StringBuilder(10);
         for (int i = 0; i < 10; i++) string.append(characters.charAt(random.nextInt(characters.length())));
         return string.toString();
+
     }
     public static String generateRandomEmail(){
         String localPart = generateRandomString();
