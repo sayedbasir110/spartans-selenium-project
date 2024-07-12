@@ -1,11 +1,14 @@
-package lab_session01;
+package lab_session01.ActivityOne;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 
+import java.util.Random;
+
 public class ActivityOne {
     public static void main(String[] args) throws InterruptedException {
+        Random random = new Random();
         WebDriver driver = new ChromeDriver();
         // 01. navigate to the tek website
         driver.get("https://retail.tekschool-students.com/");
@@ -16,7 +19,7 @@ public class ActivityOne {
         // 04. enter name
         driver.findElement(By.id("nameInput")).sendKeys("Eric");
         // 05. enter email
-        driver.findElement(By.id("emailInput")).sendKeys("eric123@gmail.com");
+        driver.findElement(By.id("emailInput")).sendKeys(GenerateRandomEmail.generateRandomEmail());
         // 06. enter password
         driver.findElement(By.id("passwordInput")).sendKeys("Eric@110");
         // 07. confirm password
