@@ -16,5 +16,7 @@ public class ActivityTwo {
         driver.findElement(By.name("btnK")).click();
         // click on first link which is tek school website
         driver.findElement(By.partialLinkText("TEK SCHOOL")).click();
+        // quit the driver
+        driver.quit();
     }
 }
