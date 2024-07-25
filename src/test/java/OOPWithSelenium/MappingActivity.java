@@ -34,12 +34,11 @@ public class MappingActivity {
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
         List<WebElement> planTypes =  wait.until(ExpectedConditions.visibilityOfAllElementsLocatedBy(By.xpath("//table/tbody/tr/td[2]")));
         List<WebElement> planPrices =  wait.until(ExpectedConditions.visibilityOfAllElementsLocatedBy(By.xpath("//table/tbody/tr/td[3]")));
-        for (WebElement planType : planTypes){
-            Map<String,String> planMap = new HashMap<>();
-            for (WebElement planPrice : planPrices)
-            planMap.put(planType.getText(), planPrice.getText());
-            System.out.println(planMap);
+        Map<String, String> planMap = new HashMap<>();
+        for (int i = 0; i < planTypes.size(); i++) {
+            planMap.put(planTypes.get(i).getText(), planPrices.get(i).getText());
         }
+        System.out.println(planMap);
         driver.quit();
 
     }
